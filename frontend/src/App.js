@@ -55,7 +55,7 @@ const App = () => {
     // Fetch leaderboard data from the backend
     const fetchLeaderboard = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/leaderboard");
+        const response = await axios.get("https://causalfunnel-quizapp.onrender.com/leaderboard");
         setLeaderboard(response.data);
       } catch (error) {
         console.log("Error fetching leaderboard:", error);
@@ -97,7 +97,7 @@ const App = () => {
 
     // Send score to backend to update leaderboard
     try {
-      await axios.post("http://localhost:5000/submit-score", {
+      await axios.post("https://causalfunnel-quizapp.onrender.com/submit-score", {
         email,
         score: calculatedScore,
       });
