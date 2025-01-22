@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Start Screen */
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-screen input {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+}
+
+.start-screen button {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Quiz Container */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.quiz-header button {
+  padding: 10px 15px;
+}
+
+.overview-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.overview-panel button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.overview-panel button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.question-panel {
+  text-align: center;
+}
+
+.answer-button {
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  color: black;
+}
+
+.answer-button:hover {
+  background-color: #ddd;
+}
+
+.answer-button.selected {
+  background-color: #28a745;
+  color: black;
+}
+
+.quiz-report-container,
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quiz-report-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.quiz-report-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.quiz-report-score {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.questions-container {
+  margin-top: 20px;
+}
+
+.question-item {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.answer-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.correct-answer {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Leaderboard Styles */
+.leaderboard-container {
+  width: 100%;
+  max-width: 600px;
+  overflow-x: auto;
+}
+
+.leaderboard-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.leaderboard-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .quiz-container,
+  .quiz-report-container,
+  .leaderboard-container {
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .start-screen input {
+    max-width: 100%;
+  }
+
+  .start-screen button {
+    max-width: 100%;
+  }
+
+  .overview-panel button {
+    padding: 8px;
+  }
+
+  .answer-button {
+    padding: 8px 12px;
+    color: black;
+  }
+
+  .question-item {
+    padding: 10px;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-panel {
+    flex-direction: column;
+  }
+}
