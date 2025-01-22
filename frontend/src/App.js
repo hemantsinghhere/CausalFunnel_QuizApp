@@ -36,7 +36,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (!isQuizEnd) {
+    if (isQuizStarted && !isQuizEnd) {
       const timer = setInterval(() => {
         setTimeLeft((prevTime) => {
           if (prevTime <= 1) {
@@ -46,10 +46,10 @@ const App = () => {
           return prevTime - 1;
         });
       }, 1000);
-
+  
       return () => clearInterval(timer);
     }
-  }, [isQuizEnd]);
+  }, [isQuizStarted, isQuizEnd]);
 
   useEffect(() => {
     // Fetch leaderboard data from the backend
